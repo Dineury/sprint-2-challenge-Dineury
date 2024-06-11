@@ -6,8 +6,16 @@
   <script id="challenge">
     // 👉 CHALLENGE 1
     function profileActivation(profile, reason) {
+     let result;
+      if(profile === true){
+        profile.active = false
+        profile.reason = "inactive for 30 days"
 
     }
+    result = profile
+    return profile
+}
+
 
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
