@@ -6,16 +6,40 @@
   <script id="challenge">
     // 👉 CHALLENGE 1
     function profileActivation(profile, reason) {
-     let result;
-      if(profile === true){
-        profile.active = false
-        profile.reason = "inactive for 30 days"
+    
+  //     if(profile.active !== true){
+  //     profile.active = true
+  //  delete profile.reason 
+  //  return profile 
+  // } else if(profile.active === true  ){
+  //      profile.active = true
+  //   profile.reason = undefined
+  //   return "confirm status manually"
+  // } else  {profile.active === true
+  //   profile.active = false
+  //   profile.reason = 'because'
+  //   return profile
+  // }
 
-    }
-    result = profile
-    return profile
+
+ if(profile.active === true && reason === undefined){
+  return "confirm status manually"
+ 
+ } else if (profile.active === false ){
+  profile.active = true
+  delete profile.reason
+  return profile
+ } else if (profile.active === true ) {
+  profile.active = false
+  profile.reason = reason 
+  return profile
+ }
+  
+    
+
+
 }
-
+  
 
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
