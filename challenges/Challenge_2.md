@@ -28,9 +28,9 @@ Example:
 ```
 
 The grid is interpreted with `x` and `y` coordinates ranging from 1 to 3.
-- `x = 1` and `y = 1` represents the top-left square.
-- `x = 3` and `y = 1` represents the top-right square.
-- `x = 3` and `y = 3` represents the bottom-right square.
+- `x = 1` and `y = 1` represents the top-left square.   x = 0 / y = 0
+- `x = 3` and `y = 1` represents the top-right square.  x = 2 / y = 0 
+- `x = 3` and `y = 3` represents the bottom-right square. x = 2 / y = 2
 
 ## Requirements
 1. If the coordinates land on a red square ("🟥"), return `"🟥 💀"`.
