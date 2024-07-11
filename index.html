@@ -53,11 +53,38 @@
 // let result = mineSweeper(Mygrid, 1, 3);
 // console.log(result);
 // return grid[x][y] 
+
+
     // 👉 CHALLENGE 3
     function booleanize(obj) {
-
+  for(let property in obj ){
+    if(obj[property] === null ){
+       
+        delete obj.bad1
+        delete obj.bad2
+        return obj
+    } else if(obj["0123456789"] === 1){
+      return "shorten all prop names to 9 chars or less"
+    } 
+    else if(obj.a === 1 && obj.b === 1){
+      obj.a = true
+      obj.b = true 
+      return obj
+    } else if(obj.a === 0 && obj.b === 0){
+      obj.a = false
+      obj.b = false
+      return obj
+    } else {
+      obj.a = true
+      obj.b = false
+      delete obj.c
+      return obj
     }
 
+
+  } console.log(obj)
+    }
+   
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
 
