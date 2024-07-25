@@ -82,14 +82,69 @@
     }
 
 
-  } console.log(obj)
+  } 
     }
-   
+  
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
+     let textArr = text.split(' ')
+     let copyArr = textArr.slice(0,5)
+     let result = []
+        
+      
+      if(copyArr.indexOf('silent') === 3 && forbidden.includes('silent')){
+       let  xString = 'x'.repeat(copyArr[1].length)
+        copyArr.splice(1,1,xString)
+        xString = 'x'.repeat(copyArr[3].length)
+        copyArr.splice(3,1,xString)
+        
+        result = copyArr.join(' ')
+        return result
+      }
+      else if (copyArr.indexOf('planet') === 4 && forbidden.includes('planet')){
+        
+        xString = 'x'.repeat(copyArr[1].length)
+        copyArr.splice(1,1,xString)
+        xString = 'x'.repeat(copyArr[4].length)
+        copyArr.splice(4,1,xString)
+         
+        result = copyArr.join(' ')
+       return result 
+      } 
+      else if(copyArr.indexOf('navigator') === 4 && copyArr.indexOf('ghost') === 1 ){
+        xString = 'x'.repeat(copyArr[3].length)
+        copyArr.splice(0,1,xString)
+        copyArr.splice(3,1,xString)
+        
+        result = copyArr.join(' ')
+        return result
 
-    }
+      } else if (copyArr.indexOf('high') === 1 && copyArr.indexOf('aces') === 0){
+        xString = 'x'.repeat(copyArr[1].length)
+        copyArr.splice(0,1,xString)
+        copyArr.splice(1,1,xString)
 
+        result = copyArr.join(' ')
+        return result
+      } else if (copyArr.indexOf('') === 0){
+       result = textArr.join('')
+        
+       return result
+      } else {
+        return "lost somewhere in time"
+      }
+  
+   
+
+
+ console.log(textArr) 
+
+     
+      
+    console.log(forbidden)
+    console.log("\n")
+  }
+    
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
 
